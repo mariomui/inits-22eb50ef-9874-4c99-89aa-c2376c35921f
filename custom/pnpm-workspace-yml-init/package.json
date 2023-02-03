@@ -13,11 +13,15 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "build:tsc": "pnpm tsc --declarationDir ./dist/mjs && pnpm tsc --declarationDir ./dist/cjs"
   },
   "keywords": [],
   "author": "",
-  "typings": "dist/**/*",
+  "typings": "./dist/types",
+  "files": [
+    "./dist/**/**.d.ts"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -26,6 +30,7 @@
     "@babel/preset-typescript": "^7.18.6",
     "@types/node": "^18.11.18",
     "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
     "eslint": "^8.33.0",
     "rimraf": "^4.1.2",
     "ts-loader": "^9.4.2",

@@ -19,7 +19,6 @@
     console.log(process?.cwd(), 'dkfdkjfd');
   }
 })();
-console.log('mjs');
 export default {
   mario: 5,
 };

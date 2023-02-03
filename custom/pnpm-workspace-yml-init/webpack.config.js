@@ -4,22 +4,10 @@ const isProduction = process.env.NODE_ENV === 'production';
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const { babelNodeConfig, babelWebConfig } = require('./configs/index');
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 /** @type {import('webpack').Configuration} */
-const webpackModuleConfig = {
+const commonConfig = {
   entry: './src/index.ts',
-  output: {
-    path: path.resolve(__dirname, 'dist/mjs/'),
-    filename: 'index.mjs',
-    library: {
-      type: 'module',
-    },
-  },
-  target: 'node18',
-  experiments: {
-    outputModule: true,
-  },
-  plugins: [],
   module: {
     rules: [
       {
@@ -29,27 +17,36 @@ const webpackModuleConfig = {
         },
         exclude: ['/node_modules/'],
       },
-      // {
-      //   test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-      //   type: 'asset',
-      // },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
   resolve: {
     extensions: ['.ts', '.js'],
   },
 };
+const webpackModuleConfig = {
+  output: {
+    path: path.resolve(__dirname, 'dist/mjs/'),
+    filename: 'index.mjs',
+    library: {
+      type: 'module',
+    },
+    clean: true,
+  },
+  target: 'node18',
+  experiments: {
+    outputModule: true,
+  },
+  plugins: [new webpack.ProgressPlugin()],
+};
 const nodeConfig = {
   entry: './src/index.ts',
   output: {
     path: path.resolve(__dirname, 'dist/cjs/'),
     filename: 'index.js',
+    clean: true,
   },
   target: 'node',
-  plugins: [],
+  plugins: [new webpack.ProgressPlugin()],
   module: {
     rules: [
       {
@@ -81,7 +78,7 @@ module.exports = () => {
     nodeConfig.mode = 'development';
   }
   return [
-    merge(babelWebConfig, webpackModuleConfig),
-    merge(babelNodeConfig, nodeConfig),
+    merge(commonConfig, babelWebConfig, webpackModuleConfig),
+    merge(commonConfig, babelNodeConfig, nodeConfig),
   ];
 };
