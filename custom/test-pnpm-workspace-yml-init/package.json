@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pnpm-workspace-yml-init": "workspace:^1.0.0"
+    "pnpm-workspace-yml-init": "^1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
   }
 }

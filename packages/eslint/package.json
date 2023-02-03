@@ -1,18 +1,99 @@
 {
-  "name": "eslint",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.50.0",
-    "@typescript-eslint/parser": "^5.50.0",
-    "eslint": "^8.33.0",
-    "eslint-plugin-react": "^7.32.2"
+  "0": {
+    "buildIndex": 0,
+    "manifest": {
+      "0": {
+        "buildIndex": 0,
+        "manifest": {
+          "name": "eslint",
+          "version": "1.0.0",
+          "description": "",
+          "main": "index.js",
+          "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+          },
+          "keywords": [],
+          "author": "",
+          "license": "ISC",
+          "devDependencies": {
+            "@typescript-eslint/eslint-plugin": "^5.50.0",
+            "@typescript-eslint/parser": "^5.50.0",
+            "eslint": "^8.33.0",
+            "eslint-plugin-react": "^7.32.2"
+          }
+        },
+        "rootDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint",
+        "binsDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint/node_modules/.bin",
+        "id": "packages/eslint",
+        "modulesDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint/node_modules",
+        "originalManifest": {
+          "name": "eslint",
+          "version": "1.0.0",
+          "description": "",
+          "main": "index.js",
+          "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+          },
+          "keywords": [],
+          "author": "",
+          "license": "ISC",
+          "devDependencies": {
+            "@typescript-eslint/eslint-plugin": "^5.50.0",
+            "@typescript-eslint/parser": "^5.50.0",
+            "eslint": "^8.33.0",
+            "eslint-plugin-react": "^7.32.2"
+          }
+        }
+      }
+    },
+    "rootDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint",
+    "binsDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint/node_modules/.bin",
+    "id": "packages/eslint",
+    "modulesDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint/node_modules",
+    "originalManifest": {
+      "0": {
+        "buildIndex": 0,
+        "manifest": {
+          "name": "eslint",
+          "version": "1.0.0",
+          "description": "",
+          "main": "index.js",
+          "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+          },
+          "keywords": [],
+          "author": "",
+          "license": "ISC",
+          "devDependencies": {
+            "@typescript-eslint/eslint-plugin": "^5.50.0",
+            "@typescript-eslint/parser": "^5.50.0",
+            "eslint": "^8.33.0",
+            "eslint-plugin-react": "^7.32.2"
+          }
+        },
+        "rootDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint",
+        "binsDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint/node_modules/.bin",
+        "id": "packages/eslint",
+        "modulesDir": "/Users/ykmmui1/coding/experiments/inits/packages/eslint/node_modules",
+        "originalManifest": {
+          "name": "eslint",
+          "version": "1.0.0",
+          "description": "",
+          "main": "index.js",
+          "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+          },
+          "keywords": [],
+          "author": "",
+          "license": "ISC",
+          "devDependencies": {
+            "@typescript-eslint/eslint-plugin": "^5.50.0",
+            "@typescript-eslint/parser": "^5.50.0",
+            "eslint": "^8.33.0",
+            "eslint-plugin-react": "^7.32.2"
+          }
+        }
+      }
+    }
   }
 }

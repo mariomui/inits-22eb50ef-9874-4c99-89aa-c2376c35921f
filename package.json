@@ -1,12 +1,159 @@
 {
-  "name": "inits",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "0": {
+    "buildIndex": 0,
+    "manifest": {
+      "0": {
+        "buildIndex": 0,
+        "manifest": {
+          "0": {
+            "buildIndex": 0,
+            "manifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            },
+            "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+            "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+            "id": ".",
+            "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+            "originalManifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            }
+          }
+        },
+        "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+        "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+        "id": ".",
+        "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+        "originalManifest": {
+          "0": {
+            "buildIndex": 0,
+            "manifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            },
+            "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+            "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+            "id": ".",
+            "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+            "originalManifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            }
+          }
+        }
+      }
+    },
+    "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+    "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+    "id": ".",
+    "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+    "originalManifest": {
+      "0": {
+        "buildIndex": 0,
+        "manifest": {
+          "0": {
+            "buildIndex": 0,
+            "manifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            },
+            "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+            "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+            "id": ".",
+            "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+            "originalManifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            }
+          }
+        },
+        "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+        "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+        "id": ".",
+        "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+        "originalManifest": {
+          "0": {
+            "buildIndex": 0,
+            "manifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            },
+            "rootDir": "/Users/ykmmui1/coding/experiments/inits",
+            "binsDir": "/Users/ykmmui1/coding/experiments/inits/node_modules/.bin",
+            "id": ".",
+            "modulesDir": "/Users/ykmmui1/coding/experiments/inits/node_modules",
+            "originalManifest": {
+              "name": "inits",
+              "version": "1.0.0",
+              "description": "",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "keywords": [],
+              "author": "",
+              "license": "ISC"
+            }
+          }
+        }
+      }
+    }
+  }
 }

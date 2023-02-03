@@ -1,15 +1,39 @@
 {
-  "name": "tsc",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^4.9.5"
+  "0": {
+    "buildIndex": 0,
+    "manifest": {
+      "name": "tsc",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+        "typescript": "^4.9.5"
+      }
+    },
+    "rootDir": "/Users/ykmmui1/coding/experiments/inits/packages/tsc",
+    "binsDir": "/Users/ykmmui1/coding/experiments/inits/packages/tsc/node_modules/.bin",
+    "id": "packages/tsc",
+    "modulesDir": "/Users/ykmmui1/coding/experiments/inits/packages/tsc/node_modules",
+    "originalManifest": {
+      "name": "tsc",
+      "version": "1.0.0",
+      "description": "",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "devDependencies": {
+        "typescript": "^4.9.5"
+      }
+    }
   }
 }
