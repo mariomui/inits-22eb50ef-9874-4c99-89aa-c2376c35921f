@@ -1,0 +1,27 @@
+{
+  "name": "pnpm-workspace-yml-init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "pnpm-workspace-yml-init": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^4.1.2",
+    "typescript": "^4.9.5"
+  },
+  "exports": {
+    "import": "dist/index.js"
+  },
+  "dependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
