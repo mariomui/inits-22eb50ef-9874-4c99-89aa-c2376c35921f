@@ -5,7 +5,7 @@
 
     const __filename = url.fileURLToPath(import.meta.url);
     const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
-    console.log({ __dirname, __filename });
+    console.log('good', { __dirname, __filename });
   } catch (err) {
     await genRunNodeProcess().catch(console.log);
     console.log('food');

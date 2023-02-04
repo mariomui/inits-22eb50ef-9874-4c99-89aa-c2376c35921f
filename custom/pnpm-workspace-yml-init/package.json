@@ -18,10 +18,7 @@
   },
   "keywords": [],
   "author": "",
-  "typings": "./dist/types",
-  "files": [
-    "./dist/**/**.d.ts"
-  ],
+  "typings": "./dist",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -41,8 +38,10 @@
   },
   "packageManager": "pnpm@7.26.3",
   "exports": {
-    "import": "./dist/mjs/index.mjs",
-    "require": "./dist/cjs/index.js"
+    ".": {
+      "import": "./dist/mjs/index.mjs",
+      "require": "./dist/cjs/index.js"
+    }
   },
   "dependencies": {
     "core-js": "^3.27.2",
