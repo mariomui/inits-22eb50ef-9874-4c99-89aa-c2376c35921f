@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "My webpack project",
   "bin": {
-    "pnpm-workspace-yml-init": "./dist/cjs/index.js"
+    "pnpm-workspace-yml-init": "./dist/mjs/index.mjs"
   },
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/js/index.js",
   "module": "./dist/mjs/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,8 +13,7 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "build:tsc": "pnpm tsc --declarationDir ./dist/mjs && pnpm tsc --declarationDir ./dist/cjs"
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -40,8 +39,9 @@
   "exports": {
     ".": {
       "import": "./dist/mjs/index.mjs",
-      "require": "./dist/cjs/index.js"
-    }
+      "require": "./dist/js/index.js"
+    },
+    "./package.json": "./package.json"
   },
   "dependencies": {
     "core-js": "^3.27.2",

@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const { babelNodeConfig, babelWebConfig } = require('./configs/index');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 /** @type {import('webpack').Configuration} */
 const commonConfig = {
   entry: './src/index.ts',
@@ -23,7 +24,9 @@ const commonConfig = {
     extensions: ['.ts', '.js'],
   },
 };
-const webpackModuleConfig = {
+
+/** @type {import('webpack').Configuration} */
+const node18ESMWepbackConfig = {
   output: {
     path: path.resolve(__dirname, 'dist/mjs/'),
     filename: 'index.mjs',
@@ -38,14 +41,16 @@ const webpackModuleConfig = {
   },
   plugins: [new webpack.ProgressPlugin()],
 };
-const nodeConfig = {
+
+/** @type {import('webpack').Configuration} */
+const nodeNonModuleWebpackConfig = {
   entry: './src/index.ts',
   output: {
-    path: path.resolve(__dirname, 'dist/cjs/'),
+    path: path.resolve(__dirname, 'dist/js/'),
     filename: 'index.js',
     clean: true,
   },
-  target: 'node',
+  target: 'node18',
   plugins: [new webpack.ProgressPlugin()],
   module: {
     rules: [
@@ -56,13 +61,6 @@ const nodeConfig = {
         },
         exclude: ['/node_modules/'],
       },
-      // {
-      //   test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-      //   type: 'asset',
-      // },
-
-      // Add your rules for custom modules here
-      // Learn more about loaders from https://webpack.js.org/loaders/
     ],
   },
   resolve: {
@@ -71,14 +69,14 @@ const nodeConfig = {
 };
 module.exports = () => {
   if (isProduction) {
-    webpackModuleConfig.mode = 'production';
-    nodeConfig.mode = 'production';
+    node18ESMWepbackConfig.mode = 'production';
+    nodeNonModuleWebpackConfig.mode = 'production';
   } else {
-    webpackModuleConfig.mode = 'development';
-    nodeConfig.mode = 'development';
+    node18ESMWepbackConfig.mode = 'development';
+    nodeNonModuleWebpackConfig.mode = 'development';
   }
   return [
-    merge(commonConfig, babelWebConfig, webpackModuleConfig),
-    merge(commonConfig, babelNodeConfig, nodeConfig),
+    merge(commonConfig, babelWebConfig, node18ESMWepbackConfig),
+    merge(commonConfig, babelNodeConfig, nodeNonModuleWebpackConfig),
   ];
 };
