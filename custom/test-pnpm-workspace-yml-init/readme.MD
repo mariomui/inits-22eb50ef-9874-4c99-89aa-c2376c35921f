@@ -1,3 +1,5 @@
+# Overaching goal create a package that
+
 * a sandbox for testing a install library
 
 * call the binary
