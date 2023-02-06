@@ -1,4 +1,4 @@
-# Overaching goal create a package that
+# Overarching goal create a package that
 
 * a sandbox for testing a install library
 
@@ -19,7 +19,8 @@
   * `node --no-warnings --loader ts-node/esm ./src/index.mts`
   * the imports grab from the mjs folder file, like i specified in the library's package.json.
   * import.meta.url works
-****
+
+---
 
 * pnpm pinit
   * executes the script that calls `pnpm-workspace-yml-init`
@@ -51,3 +52,7 @@
           * The compiled bin should show the updated directory when i run change the bin mappings to xjs ONLY after I reinstall
           * `cat ./node_modules/.bin/pnpm-workspace-yml-init`
             * YUP!!!
+
+---
+
+the only way for steady migration without breaking everything is to convert specify the module loader to be commonjs, then to transpile all incoming modules to common js with babel.

@@ -19,6 +19,5 @@
     console.log(process?.cwd(), 'dkfdkjfd');
   }
 })();
-export default {
-  mario: 5,
-};
+
+export default {};

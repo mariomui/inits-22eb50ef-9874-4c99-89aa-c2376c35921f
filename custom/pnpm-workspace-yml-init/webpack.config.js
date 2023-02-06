@@ -5,6 +5,8 @@ const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const { babelNodeConfig, babelWebConfig } = require('./configs/index');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 /** @type {import('webpack').Configuration} */
 const commonConfig = {
@@ -39,7 +41,7 @@ const node18ESMWepbackConfig = {
   experiments: {
     outputModule: true,
   },
-  plugins: [new webpack.ProgressPlugin()],
+  plugins: [],
 };
 
 /** @type {import('webpack').Configuration} */
@@ -51,7 +53,7 @@ const nodeNonModuleWebpackConfig = {
     clean: true,
   },
   target: 'node18',
-  plugins: [new webpack.ProgressPlugin()],
+  plugins: [],
   module: {
     rules: [
       {
@@ -67,16 +69,29 @@ const nodeNonModuleWebpackConfig = {
     extensions: ['.ts'],
   },
 };
-module.exports = () => {
-  if (isProduction) {
+module.exports = (env, args) => {
+  const _isProduction = isProduction || args.mode === 'production';
+  const isReport = env.report === 'true';
+  console.log({ isReport });
+  if (_isProduction) {
     node18ESMWepbackConfig.mode = 'production';
     nodeNonModuleWebpackConfig.mode = 'production';
+    node18ESMWepbackConfig.plugins.push(
+      new BundleAnalyzerPlugin({
+        openAnalyzer: isReport,
+        analyzerMode: isReport ? 'server' : 'static',
+        analyzerPort: 'auto',
+      })
+    );
   } else {
     node18ESMWepbackConfig.mode = 'development';
     nodeNonModuleWebpackConfig.mode = 'development';
   }
-  return [
+  const finalConfigs = [
     merge(commonConfig, babelWebConfig, node18ESMWepbackConfig),
     merge(commonConfig, babelNodeConfig, nodeNonModuleWebpackConfig),
   ];
+  // return a mjs config for imports
+  // return a js config for require
+  return finalConfigs;
 };

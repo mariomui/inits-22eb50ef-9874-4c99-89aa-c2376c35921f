@@ -89,3 +89,9 @@
   ...
   }
   ```
+
+* i wish there was an automated way to change the folder name and have it reflect in the yaml conf
+
+## packages
+
+* houses all the init experiments
