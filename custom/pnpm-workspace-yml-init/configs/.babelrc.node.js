@@ -11,7 +11,7 @@ const esNodeConfig = {
               [
                 '@babel/preset-env',
                 {
-                  modules: 'auto',
+                  // modules: ,
                 },
               ],
               ['@babel/preset-typescript', {}],

@@ -1,7 +1,7 @@
 # Overarching goal create a package that
 
 * a sandbox for testing a install library
-
+* go inside this sandbox folder.
 * call the binary
   * `pnpm pnpm-workspace-yml-init`
   * this calls cjs/index.js

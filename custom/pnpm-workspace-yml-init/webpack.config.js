@@ -52,19 +52,23 @@ const nodeNonModuleWebpackConfig = {
     filename: 'index.js',
     clean: true,
   },
+  experiments: {
+    outputModule: true,
+  },
   target: 'node18',
   plugins: [],
-  module: {
-    rules: [
-      {
-        test: /\.(ts)$/i,
-        use: {
-          loader: 'babel-loader',
-        },
-        exclude: ['/node_modules/'],
-      },
-    ],
-  },
+  // merge property here is fucking up.
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.(ts)$/i,
+  //       exclude: ['/node_modules/'],
+  //       use: {
+  //         loader: 'babel-loader',
+  //       },
+  //     },
+  //   ],
+  // },
   resolve: {
     extensions: ['.ts'],
   },
@@ -90,6 +94,7 @@ module.exports = (env, args) => {
   const finalConfigs = [
     merge(commonConfig, babelWebConfig, node18ESMWepbackConfig),
     merge(commonConfig, babelNodeConfig, nodeNonModuleWebpackConfig),
+    // js is broken
   ];
   // return a mjs config for imports
   // return a js config for require
